@@ -23,28 +23,45 @@ public class Employee{
      * Returns true is an employee is above 16 years old
      */
     private int calculateAge(int currentYear){
-        return (currentYear - yearOfBirth);
+        return (currentYear - yearOfBirth); // 
     }
 
     /**
      * Returns true is an employee is above 16 years old
      */
     public boolean canDrive(){
-        int age = calculateAge(2025);
-        // to be completed
+        int age = calculateAge(2025); 
+        // Solution for this code. Question 12
+        // Step 1. Set Age to currentYear - yearOfBirth.
+        // Step 2. if Age>= 16 them
+        //            Print "they can drive"
+        //         else
+        //            Print "They cannot drive"
     }
 
     /*
      * Returns the net pay for the outstanding unpaid hours
      */
     private double calculatePay(){
-        // to be completed
+        // Solution for this code. Question 13
+        // Step 1. get values for unpaidHours and hourlyWage
+        // Step 2. Set tax rate to 0.30
+        // Step 3. set total to hourlyWage x unpaid hours
+        // Step 4. set salary to total x tax rate.
+        // Step 5. Print Salary.
     }
 
     /*
      * Output the payment record and resets unpaid hours
      */
-    public void paySalary(){
-        // to be completed
+    public void paySalary(int hourlyWage,int unpaidHours){
+        int paySalary = hourlyWage - unpaidHours;
+        //This is my solution for question 14.
+        // step 1. Get value for Salary
+        // Step 2 set moneyReceived to Salary - paySalary
+        // Step 3. set unpaidHours to 0
+        // Step 4. Print (employee + "has received a wire transfer of" + 
+        // moneyReceived + "Cad")
+        
     }
 }
