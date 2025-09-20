@@ -52,13 +52,12 @@ public class Employee{
     /*
      * Returns the net pay for the outstanding unpaid hours
      */
-    private double calculatePay(int hourlyWage,int unpaidHours){
-        double taxRate = 0.30;
-        double subtotal = hourlyWage*unpaidHours;
-        double total = subtotal*taxRate;
-        double Salary = total*subtotal;
-        System.out.println(Salary);
-        return Salary;
+    private double calculatePay(double hoursWorked){
+        double subtotal = hourlyWage*hoursWorked;
+        double subtotal2 = hourlyWage*unpaidHours;
+        double beforeTaxes = subtotal+subtotal2;
+        double total = beforeTaxes - (beforeTaxes*0.30);
+        return total;
         
         
         // Solution for this code. Question 13
@@ -73,11 +72,9 @@ public class Employee{
     /*
      * Output the payment record and resets unpaid hours
      */
-    public void paySalary(int hourlyWage,int unpaidHours,String fullname){
-        int salary = hourlyWage - unpaidHours;
-        int transaction = salary - salary;
-        System.out.println(String
-        //This is my solution for question 14.
+    public void paySalary(double hoursWorked){
+        double total = calculatePay(hoursWorked);
+        System.out.println(fullname + "has received a wire transfer of" + total + "CAD");//This is my solution for question 14.
         // step 1. Get value for Salary
         // Step 2 set transaction to Salary - paySalary
         // Step 3. set unpaidHours to 0
